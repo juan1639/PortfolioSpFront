@@ -1,4 +1,4 @@
-import { BASE_URL_API } from "./constants";
+import { BASE_URL_API } from "./constants.js";
 
 function obtenerLenguajes()
 {
