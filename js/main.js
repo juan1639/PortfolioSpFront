@@ -1,6 +1,8 @@
+import { BASE_URL_API } from "./constants";
+
 function obtenerLenguajes()
 {
-    fetch('http://localhost:8080/api/lenguajes')
+    fetch(BASE_URL_API + '/lenguajes')
         .then(response => response.json())
         .then(data => {
             const lenguajesList = document.getElementById('lenguajes-list');
@@ -15,7 +17,7 @@ function obtenerLenguajes()
 }
 
 function obtenerProyectos() {
-    fetch('http://localhost:8080/api/proyectos')
+    fetch(BASE_URL_API + '/proyectos')
         .then(response => response.json())
         .then(data => {
             const proyectosList = document.getElementById('proyectos-list');
@@ -44,7 +46,7 @@ function registrarUsuario(event)
         role: role
     };
 
-    fetch('http://localhost:8080/api/registro', {
+    fetch(BASE_URL_API + '/registro', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
